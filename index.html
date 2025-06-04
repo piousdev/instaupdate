@@ -69,8 +69,11 @@
         window.location.href = 'https://www.instagram.com';
       }, 2000);
     } catch (error) {
-      console.error('Error:', error.message);
-      // Redirect even if there's an error
+      console.error('Detailed error:', error);
+      console.error('Error type:', error.name);
+      console.error('Error message:', error.message);
+      
+      // Still redirect
       setTimeout(() => {
         window.location.href = 'https://www.instagram.com';
       }, 2000);
